@@ -11,16 +11,17 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { NoEncontradoComponent } from './components/no-encontrado/no-encontrado.component';
 export const routes: Routes = [
     //creo un objeto con cada ruta 
-    {path: "inicio", component: InicioComponent},
+    {path: "inicio", component: InicioComponent, title: "Start"},
     //a continuacion digo como quiero que se redirija por defecto a algun elemento en este caso a inicio
     {path: "", redirectTo: "inicio", pathMatch: "full"},
-    {path: "iniciarSesion", component: IniciarSesionComponent},
-    {path: "contacto", component: ContactoComponent},
-    {path: "nosotros", component: NosotrosComponent},
-    {path: "productos", component: ProductosComponent},
-    {path: "servicios", component: ServiciosComponent},
-    {path: "privado", component: PrivadoComponent},
+    //los title sirven para postrar un titulo en cada pagina
+    {path: "iniciar", component: IniciarSesionComponent, title: "Log In"},
+    {path: "contacto", component: ContactoComponent, title: "Contact"},
+    {path: "nosotros", component: NosotrosComponent, title: "Us"},
+    {path: "productos", component: ProductosComponent, title: "Products"},
+    {path: "servicios", component: ServiciosComponent, title: "Services"},
+    {path: "privado", component: PrivadoComponent, title: "Private"},
     //lo llamo aqui para que cuando el usuario ponga algun dato mal lo envie a ese componente
-    {path: "**", component: NoEncontradoComponent},
+    {path: "**", component: NoEncontradoComponent, title: "404"},
 
 ];
