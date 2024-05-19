@@ -1,1 +1,14 @@
 <p>iniciar-sesion works!</p>
+<!--Replicando el inicio de seion en mi proyecto con formularios reactivos-->
+<section>
+    <div>
+        <h3>Incio de sesion</h3>
+    </div>
+    <form [formGroup]="Formulariocredenciales"(ngSubmit)="manejarEnvio()">
+        <label for="usuario">Ingrese usuario</label>
+        <input type="text" placeholder="usuario" formControlName="usuario"> <br>
+        <label for="pas">Ingrese contraseña</label>
+        <input type="password" placeholder="contrasena" formControlName="contrasenia"> <br>
+        <button>Iniciar sesion</button>
+    </form>
+</section>
